@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { DataType } from "../utils/types";
 
 const useFetch = (url: string) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<DataType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 

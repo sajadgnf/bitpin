@@ -9,6 +9,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  color: #fff;
   font-size: 12px;
   font-weight: 400;
 }
@@ -23,8 +24,10 @@ code {
 
 .tabs {
   gap: 14px;
-  color: #fff;
   display: flex;
+  margin-bottom: 32px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333333;
 
   li {
     color: #b2b2b2;
@@ -35,15 +38,15 @@ code {
 }
 
 .current-tab {
+  border-radius: 12px;
   color: #fff !important;
   border: 2px solid #4ef09d;
-  border-radius: 12px;
 }
 
-.lds-hourglass,
-.lds-hourglass:after {
-  color: #fff;
+.hidden {
+  display: none;
 }
+
 .lds-hourglass {
   width: 80px;
   height: 80px;
@@ -73,5 +76,23 @@ code {
   }
   100% {
     transform: rotate(1800deg);
+  }
+}
+
+.table-header {
+  text-align: start;
+  padding-bottom: 10px;
+}
+
+.cryptocurrency_name_style {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  div {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { logo } from "./constants";
+import { logo } from "./utils/constants";
 import DetailPage from "./pages/detail";
 import ListPage from "./pages/list";
 
