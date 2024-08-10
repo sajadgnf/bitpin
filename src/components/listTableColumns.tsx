@@ -27,7 +27,15 @@ const listTableColumns = () => {
     },
     {
       name: "24_hour_change",
-      content: (row: ResultType) => (row.volume_24h),
+      content: (row: ResultType) =>
+        row.internal_price_info.change ? (
+          <p dir="ltr" style={row.internal_price_info.change.toString().includes("-") ? { color: "#ff5a5a" } : { color: "#4ef09d" }}>
+            {!row.internal_price_info.change.toString().includes("-") && "+"}
+            {row.internal_price_info.change?.toFixed(2)}%
+          </p>
+        ) : (
+          <p dir="ltr">___</p>
+        ),
     },
   ];
 

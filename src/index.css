@@ -81,18 +81,24 @@ code {
 
 .table-header {
   text-align: start;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  padding-left: 100px;
 }
 
 .cryptocurrency_name_style {
   gap: 10px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 
   div {
     gap: 10px;
     display: flex;
     flex-direction: column;
   }
+}
+
+.table-rows {
+  text-align: right;
+  padding-left: 100px;
+  padding-bottom: 20px;
 }

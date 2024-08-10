@@ -8,7 +8,7 @@ const Table = ({ columns, rows, extraClasses }: { columns: ColumnsType<ResultTyp
       <thead>
         <tr>
           {columns.map((col, index) => (
-            <th className="table-header">
+            <th key={index} className="table-header">
               <Trans key={col.name + index}>{col.name}</Trans>
             </th>
           ))}
@@ -18,7 +18,9 @@ const Table = ({ columns, rows, extraClasses }: { columns: ColumnsType<ResultTyp
         {rows.map((row) => (
           <tr key={row.id}>
             {columns.map((col, index) => (
-              <td key={col.name + index}>{col.content(row)}</td>
+              <td className="table-rows" key={index}>
+                {col.content(row)}
+              </td>
             ))}
           </tr>
         ))}
